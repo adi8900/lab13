@@ -1,76 +1,86 @@
 .header {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin: 3rem auto;
-  width: 90%;
-  max-width: 75rem;
+  padding: 2rem 1rem;
+  gap: 3rem;
+  margin: auto;
+  max-width: 80rem;
 }
 
-.slideshow {
-  width: 40rem;
-  height: 25rem;
+.image {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
 }
 
-.hero {
+.header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  animation: fade-slide-in-from-left 1s ease-out forwards;
+}
+
+.headerText {
+  padding: 1rem;
   color: #ddd6cb;
-  font-size: 1.5rem;
+  max-width: 40rem;
+  text-align: center;
+  animation: fade-slide-in-from-right 1s ease-out forwards;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.15rem;
+.headerText h1 {
+  margin: 0;
+  font-size: 3rem;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #f9572a, #ffc905);
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.creator {
+  font-size: 1.4rem;
+  color: #cfa69b;
+  font-style: italic;
+}
+
+.creator a {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.cta {
-  font-size: 1.5rem;
-  display: flex;
-  gap: 1rem;
+.creator a:hover,
+.creator a:active {
+  text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
 }
 
-.cta a {
-  display: inline-block;
-  /* margin-top: 1rem; */
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(90deg, #f9572a, #ff9b05);
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
+.summary {
+  font-size: 1.3rem;
+  margin-top: 1rem;
 }
 
-.cta a:hover,
-.cta a:active {
-  background: linear-gradient(90deg, #fc5527, #ffbc50);
-}
-
-.cta a:first-child {
-  background: transparent;
-  font-weight: normal;
-  color: #ff9b05;
-  padding-left: 0;
-}
-
-.cta a:first-child:hover,
-.cta a:first-child:active {
-  background: transparent;
-  color: #f9b241;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  color: #ddd6cb;
-  font-size: 1.5rem;
-  max-width: 50rem;
-  width: 90%;
+.instructions {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  max-width: 60rem;
   margin: 2rem auto;
+  animation: fade-slide-in-from-bottom 1s ease-out forwards;
+}
+
+.loading {
+  font-size: 2.5rem;
   text-align: center;
+  color: #ddd6cb;
+  font-weight: bold;
+  animation: flash 1s ease-in-out infinite alternate;
 }
